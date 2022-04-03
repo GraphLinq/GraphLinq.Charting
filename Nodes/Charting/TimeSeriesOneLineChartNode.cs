@@ -10,13 +10,13 @@ using QuickChart;
 
 namespace NodeBlock.Plugin.Charting.Nodes.Charting
 {
-    [NodeDefinition("TimeSeriesLineChartNode", "Generate Time Series Line Chart", NodeTypeEnum.Function, "Charting")]
-    [NodeGraphDescription("Generate image from time series data")]
+    [NodeDefinition("TimeSeriesOneLineChartNode", "Generate Time Series One Line Chart", NodeTypeEnum.Function, "Charting")]
+    [NodeGraphDescription("Generate image from time series data with one line")]
 
-    public class TimeSeriesLineChartNode : Node
+    public class TimeSeriesOneLineChartNode : Node
     {
-        public TimeSeriesLineChartNode(string id, BlockGraph graph)
-           : base(id, graph, typeof(TimeSeriesLineChartNode).Name)
+        public TimeSeriesOneLineChartNode(string id, BlockGraph graph)
+           : base(id, graph, typeof(TimeSeriesOneLineChartNode).Name)
         {
             this.InParameters.Add("xDataSeries", new NodeParameter(this, "xDataSeries", typeof(string), true));
             this.InParameters.Add("yDataSeries", new NodeParameter(this, "yDataSeries", typeof(string), true));
